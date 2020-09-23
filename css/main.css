@@ -1,0 +1,242 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+/* font-family: 'Poiret One', cursive; */
+/* 기본화면 1600px 이상 */
+body { font-size:12px;
+       line-height:1.6; 
+       font-family: 'Poiret One', cursive;
+       color:#555 }
+
+header { width:15%; height:100%; background:#fff ;
+    position:fixed; left:0; top:0; }
+header h1 { position:absolute; top:70px; left:50%; 
+    transform:translate(-50%) }
+header h1 > a { display:block; width:180px; height:136px;
+    background:url(../img/logo1.png) no-repeat;
+    background-size:contain; }    
+
+header #gnb { position:absolute; top:300px; right:50%;
+    transform:translate(50%); 
+    font-size:17px; font-weight:bold; line-height:1.8; } 
+header #gnb a { display:block; padding:8px 0px; 
+    transition:all 0.5s }    
+header #gnb a:hover { color:skyblue }   
+
+header .snsSet { position:absolute; bottom:50px; 
+    right:50%; transform:translate(50%); width:90px;  }
+header .snsSet a { float:left }    
+
+nav { width:85%; height:35px; background:#212121; margin-left:15%; position:relative; }
+nav > a { position:absolute; top:5px}
+nav > a:nth-child(1) { left:10px; }
+nav > a:nth-child(2) { left:150px; }
+nav > a:nth-child(3) { right:90px; }
+nav > a:nth-child(4) { right:10px; }
+
+@keyframes scale {
+    0% { transform:scale(0) }
+    100% { transform:scale(1) }
+}
+section { width:85%; margin-left:15%; position:relative }
+section article { float:left; height:260px; 
+    transition:all 0.5s;
+    animation:scale 1s 1;
+}
+section article:nth-child(1) { width:60%; height:520px }
+section article:nth-child(2) { width:40% }
+section article:nth-child(3) { width:20% }
+section article:nth-child(4) { width:20% }
+section article:nth-child(5) { width:20% }
+section article:nth-child(6) { width:40% }
+section article:nth-child(7) { width:20% }
+section article:nth-child(8) { width:20% }
+section article:nth-child(9) { width:40% }
+section article:nth-child(10) { width:20% }
+section article:nth-child(11) { width:20% }
+section article:nth-child(12) { width:20% }
+
+article div { width:100%; height:100%; position:relative;
+    overflow:hidden }
+article .bg1 { background-image:url(../img/pic1.jpg) }
+article .bg2 { background-image:url(../img/pic2.jpg) }
+article .bg3 { background-image:url(../img/pic3.jpg) }
+article .bg4 { background-image:url(../img/pic4.jpg) }
+article .bg5 { background-image:url(../img/pic5.jpg) }
+article .bg6 { background-image:url(../img/pic6.jpg) }
+article .bg7 { background-image:url(../img/pic7.jpg) }
+article .bg { background-repeat:no-repeat;  
+    background-size:cover; 
+    background-position:center; }
+article .bg > span { font-size:60px; color:#fff; 
+    position:absolute; bottom:0px; right:20px;
+    transform:scale(10); opacity:0;
+    transition:all 0.5s; }  
+article .bg1 > span { font-size:170px; bottom:-76px; right:-6px; transform:scale(1); opacity:1 }  
+article:hover .bg > span { transform:scale(1); opacity:1; }
+
+article .txt { color:#666; background:#fff; 
+    padding:40px 30px; transition:all 1s; }
+article:nth-child(3) .txt { background:#bff7fa }
+article:nth-child(11) .txt { background:#e3fafb }
+article .txt strong { font-size:30px; color:#444; 
+margin-bottom:0px; display:block; transition:all 1s }
+
+article:hover .txt { background:#6ce2fb; color:#fff }
+article:hover .txt strong { color:#fff }
+
+/* i 태그에 스타일을 적용할때는 svg로 바꿔서 적용 */
+article .txt svg { position:absolute; bottom:-70px; right:-200px; opacity:0; color:#fff; font-size:300px;
+transition:all 0.7s; }
+article:hover .txt svg { right:0px; opacity:0.5;  }
+article:nth-child(3) .txt svg { right:-15px; opacity:0.5;
+    font-size:200px; bottom:-20px; }
+
+/* 1024~1599 넓이 */
+@media screen and (max-width:1599px) {
+
+    header { width:100%; height:80px; background:#fff ;
+        position:relative; left:0; top:0; }
+    header h1 { position:absolute; top:20px; left:20px; 
+        transform:translate(0%) }
+    header h1 > a { display:block; width:200px; height:40px;
+        background:url(../img/logo2.png) no-repeat;
+        background-size:contain; }    
+    
+    header #gnb { position:absolute; top:20px; right:140px;
+        transform:translate(0%); } 
+    header #gnb > li { float:left }        
+    header #gnb a { display:block; padding:8px 20px; 
+        transition:all 0.5s }    
+     
+    header .snsSet { position:absolute; bottom:20px; 
+        right:20px; transform:translate(0%); width:90px;  }
+    header .snsSet a { float:left }    
+    
+    nav { width:100%; height:35px; background:#212121; margin-left:0% }
+    section { width:100%; margin-left:0% }
+
+
+}
+
+
+/* 780px ~ 1023px 넓이 */
+@media screen and (max-width:1023px) {
+
+    header #gnb { position:absolute; top:20px; right:20px;
+        transform:translate(0%); } 
+    header .snsSet { display:none  }
+    
+section article { float:left; height:260px; }
+section article:nth-child(1) { width:100%; height:400px }
+section article:nth-child(2) { width:66.66% }
+section article:nth-child(3) { width:33.33% }
+section article:nth-child(4) { width:20%; display:none; }
+section article:nth-child(5) { width:33.33% }
+section article:nth-child(6) { width:66.66% }
+section article:nth-child(7) { width:20%; display:none; }
+section article:nth-child(8) { width:33.33% }
+section article:nth-child(9) { width:33.33% }
+section article:nth-child(10) { width:20%; display:none; }
+section article:nth-child(11) { width:33.33% }
+section article:nth-child(12) { width:20%; display:none; }
+
+
+
+}
+
+
+/* 640px ~ 779px 넓이 */
+@media screen and (max-width:779px) {
+
+    header #gnb a { display:block; padding:8px 0px 8px 15px;    transition:all 0.5s }
+
+section article { float:left; height:260px; }
+section article:nth-child(1) { width:100%; height:400px }
+section article:nth-child(2) { width:100% }
+section article:nth-child(3) { width:33.33%; display:none }
+section article:nth-child(4) { width:20%; display:none; }
+section article:nth-child(5) { width:50% }
+section article:nth-child(6) { width:50% }
+section article:nth-child(7) { width:20%; display:none; }
+section article:nth-child(8) { width:50% }
+section article:nth-child(9) { width:50% }
+section article:nth-child(10) { width:20%; display:none; }
+section article:nth-child(11) { width:50% }
+section article:nth-child(12) { width:50%; display:block;  }
+
+
+}
+
+
+/* 480px ~ 639px 넓이 */
+@media screen and (max-width:639px) {
+
+    nav { display:none }
+    header { width:100%; height:140px; background:#fff ;
+        position:relative; left:0; top:0; }
+    header h1 { position:absolute; top:20px; left:50%; 
+            transform:translate(-50%) }        
+
+    header #gnb { position:absolute; top:85px; right:0px;
+                transform:translate(0%); width:100% }
+    header #gnb > li { float:left; width:25%  }        
+    header #gnb a { display:block; padding:8px 0px; 
+                    transition:all 0.5s; text-align:center }
+
+section article { float:left; height:150px; }
+section article:nth-child(1) { width:100%; height:300px }
+section article:nth-child(2) { width:100% }
+section article:nth-child(3) { width:33.33%; display:none }
+section article:nth-child(4) { width:20%; display:none; }
+section article:nth-child(5) { width:50% }
+section article:nth-child(6) { width:50% }
+section article:nth-child(7) { width:20%; display:none; }
+section article:nth-child(8) { width:50% }
+section article:nth-child(9) { width:50% }
+section article:nth-child(10) { width:20%; display:none; }
+section article:nth-child(11) { width:50% }
+section article:nth-child(12) { width:50%; display:block;  }
+
+article .txt em { display:none }
+article .txt strong { font-size:25px; }
+article .bg1 span { font-size:120px; bottom:-50px }
+
+
+}
+
+
+/* 479px 넓이 이하 */
+@media screen and (max-width:479px) {
+
+    header { width:100%; height:100%; background:transparent ;
+        position:fixed; left:0; top:0; z-index:9999; }
+    header h1 { position:absolute; top:40px; left:50%; 
+            transform:translate(-50%) }   
+    header h1 > a { display:block; width:140px; 
+        height:100px;
+        background:url(../img/logo1.png) no-repeat;
+        background-size:contain; }                  
+
+    header #gnb { position:absolute; top:180px; right:50%;
+                transform:translate(50%); width:250px }
+    header #gnb > li { float:left; width:100%;
+        margin:8px 0; }        
+    header #gnb a { display:block; padding:8px 40px; 
+        transition:all 0.5s; text-align:left;
+        background:rgba(0,0,0,0.5);
+        color:#fff; border-radius:10px;   }
+    header #gnb a:hover {
+        transform:scale(1.1); background:rgba(0,0,0,1);
+    }        
+
+
+section article { float:left; height:150px; display:none; }
+section article:nth-child(1) { width:100%; height:100%;
+display:block; position:fixed;  }
+section article:nth-child(1) span { display:none }
+
+section article:nth-child(12) { width:50%; display:none;  }    
+
+
+}
